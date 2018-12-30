@@ -1,5 +1,5 @@
 # FluentValidation.Extensions.AutoMapper
-FluentValidation Extensions for AutoMapper
+FluentValidation Extensions for AutoMapper 7 and 8
 
 ## NuGet
 [![NuGet Badge FluentValidation.Extensions.AutoMapper](https://buildstats.info/nuget/FluentValidation.Extensions.AutoMapper)](https://www.nuget.org/packages/FluentValidation.Extensions.AutoMapper)
@@ -103,3 +103,5 @@ You can then use the injected `IMapper` to create a new instance from the `Fluen
 +    ValidatorOptions.PropertyNameResolver = resolver.Resolve;
 }
 ```
+
+For a complete example, see the code from [FluentValidationExample.Web](https://github.com/StefH/FluentValidation.Extensions.AutoMapper/tree/master/examples/FluentValidationExample.Web).
