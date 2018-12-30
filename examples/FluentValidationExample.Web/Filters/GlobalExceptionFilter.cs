@@ -1,4 +1,5 @@
-﻿using FluentValidation;
+﻿using System.Linq;
+using FluentValidation;
 using FluentValidationExample.Common.Validation;
 using JetBrains.Annotations;
 using Microsoft.AspNetCore.Mvc;
@@ -28,7 +29,7 @@ namespace FluentValidationExample.Web.Filters
                 _logger.LogError(validationException, "ValidationException");
 
                 var modelState = new ModelStateDictionary();
-                foreach (var error in validationException.Errors)
+                foreach (var error in validationException.Errors.OrderBy(e => e.PropertyName))
                 {
                     modelState.AddModelError(error.PropertyName, error.ErrorMessage);
                 }

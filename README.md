@@ -1,6 +1,9 @@
 # FluentValidation.Extensions.AutoMapper
 FluentValidation Extensions for AutoMapper
 
+## NuGet
+[![NuGet Badge FluentValidation.Extensions.AutoMapper](https://buildstats.info/nuget/FluentValidation.Extensions.AutoMapper)](https://www.nuget.org/packages/FluentValidation.Extensions.AutoMapper)
+
 # Problem
 
 When the normal MVC validation is defined on a ViewModel and additional validation is done in the business-layer on the dto's using FluentValidation, the error messages are using the property names from the dto instead of the view-model.
@@ -15,12 +18,8 @@ public class Person
     [Required]
     public string FirstName { get; set; }
 
-    // ...
-
-    [Required]
     public string Street { get; set; }
 
-    [Required]
     public string City { get; set; }
 }
 ```
@@ -48,7 +47,7 @@ public class AddressDto
 }
 ```
 
-When posting an invalif Person object to the WebAPI, you get an error back like (notice that the property names from the DTO are used!):
+When posting an invalid Person object to the WebAPI, you get an error back like (notice that the property names from the DTO are used!):
 ``` json
 {
     "First": [
@@ -77,5 +76,30 @@ Example response will be like:
     "FirstName": [
         "no 'a' allowed"
     ]
+}
+```
+
+## Code Changes
+To get this working you need the following changes for a DotNet Core MVC WebAPI project:
+
+
+#### 1. Install the `FluentValidation.Extensions.AutoMapper` package
+``` cmd
+dotnet add package FluentValidation.Extensions.AutoMapper
+```
+
+#### 2. Dependency Injection Configuration changes
+
+Let the DI framework inject an instance of `IMapper` into your `Configure(...)` method.
+You can then use the injected `IMapper` to create a new instance from the `FluentValidationPropertyNameResolver` and assign this to the static `ValidatorOptions` class.
+
+``` diff
+-public void Configure(IApplicationBuilder app, IHostingEnvironment env)
++public void Configure(IApplicationBuilder app, IHostingEnvironment env, IMapper mapper)
+{
+     mapper.ConfigurationProvider.AssertConfigurationIsValid();
+
++    var resolver = new FluentValidationPropertyNameResolver(mapper);
++    ValidatorOptions.PropertyNameResolver = resolver.Resolve;
 }
 ```
