@@ -83,9 +83,9 @@ Example response will be like:
 To get this working you need the following changes for a DotNet Core MVC WebAPI project:
 
 
-#### 1. Install the `FluentValidation.Extensions.AutoMapper` package
+#### 1. Install the `FluentValidationExtensions.AutoMapper` package
 ``` cmd
-dotnet add package FluentValidation.Extensions.AutoMapper
+dotnet add package FluentValidationExtensions.AutoMapper
 ```
 
 #### 2. Dependency Injection Configuration changes
