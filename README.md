@@ -2,7 +2,7 @@
 FluentValidation Extensions for AutoMapper 7 and 8
 
 ## NuGet
-[![NuGet Badge FluentValidation.Extensions.AutoMapper](https://buildstats.info/nuget/FluentValidation.Extensions.AutoMapper)](https://www.nuget.org/packages/FluentValidation.Extensions.AutoMapper)
+[![NuGet Badge FluentValidation.Extensions.AutoMapper](https://buildstats.info/nuget/FluentValidationExtensions.AutoMapper)](https://www.nuget.org/packages/FluentValidationExtensions.AutoMapper)
 
 # Problem
 
