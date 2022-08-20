@@ -32,14 +32,14 @@ namespace FluentValidation.Extensions.AutoMapper
             var allTypeMaps = mapper.ConfigurationProvider.GetAllTypeMaps();
             foreach (TypeMap map in allTypeMaps)
             {
-#if AUTOMAPPER8
+#if AUTOMAPPER11 || AUTOMAPPER8
                 var propertyMaps = map.PropertyMaps;
 #else
                 var propertyMaps = map.GetPropertyMaps();
 #endif
                 foreach (PropertyMap propertyMap in propertyMaps)
                 {
-#if AUTOMAPPER8
+#if AUTOMAPPER11 || AUTOMAPPER8
                     string destinationName = propertyMap.DestinationName;
 #else
                     string destinationName = propertyMap.DestinationProperty.Name;
