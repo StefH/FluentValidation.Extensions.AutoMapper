@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.168
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CF3B6229-D3E1-41D6-A85C-E01096D39560}"
 EndProject
@@ -21,6 +21,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentValidationExample.Business", "examples\FluentValidationExample.Business\FluentValidationExample.Business.csproj", "{1B2B673E-F4DD-46E6-9D27-5EC4F6C9D620}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentValidationExample.Web", "examples\FluentValidationExample.Web\FluentValidationExample.Web.csproj", "{2D6CE8FE-2FC4-45FE-9C45-5518DCD59060}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentValidationExample.WebApi6", "examples\FluentValidationExample.WebApi6\FluentValidationExample.WebApi6.csproj", "{2E00CC53-11A1-4817-BA09-5AE6A3054AE0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentValidationExample.Business6", "examples\FluentValidationExample.Business6\FluentValidationExample.Business6.csproj", "{B563C5B4-D44A-4F1B-83E2-D3FF57AE3A25}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentValidationExample.Common6", "examples\FluentValidationExample.Common6\FluentValidationExample.Common6.csproj", "{CBD9DEE9-A727-4112-B724-06B517B70025}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +50,18 @@ Global
 		{2D6CE8FE-2FC4-45FE-9C45-5518DCD59060}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D6CE8FE-2FC4-45FE-9C45-5518DCD59060}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D6CE8FE-2FC4-45FE-9C45-5518DCD59060}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E00CC53-11A1-4817-BA09-5AE6A3054AE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E00CC53-11A1-4817-BA09-5AE6A3054AE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E00CC53-11A1-4817-BA09-5AE6A3054AE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E00CC53-11A1-4817-BA09-5AE6A3054AE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B563C5B4-D44A-4F1B-83E2-D3FF57AE3A25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B563C5B4-D44A-4F1B-83E2-D3FF57AE3A25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B563C5B4-D44A-4F1B-83E2-D3FF57AE3A25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B563C5B4-D44A-4F1B-83E2-D3FF57AE3A25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBD9DEE9-A727-4112-B724-06B517B70025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBD9DEE9-A727-4112-B724-06B517B70025}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBD9DEE9-A727-4112-B724-06B517B70025}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBD9DEE9-A727-4112-B724-06B517B70025}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +71,9 @@ Global
 		{3C93A91B-59FB-4D5E-930C-008857400883} = {03ADEF51-E586-499F-91C3-CF41526EACA0}
 		{1B2B673E-F4DD-46E6-9D27-5EC4F6C9D620} = {03ADEF51-E586-499F-91C3-CF41526EACA0}
 		{2D6CE8FE-2FC4-45FE-9C45-5518DCD59060} = {03ADEF51-E586-499F-91C3-CF41526EACA0}
+		{2E00CC53-11A1-4817-BA09-5AE6A3054AE0} = {03ADEF51-E586-499F-91C3-CF41526EACA0}
+		{B563C5B4-D44A-4F1B-83E2-D3FF57AE3A25} = {03ADEF51-E586-499F-91C3-CF41526EACA0}
+		{CBD9DEE9-A727-4112-B724-06B517B70025} = {03ADEF51-E586-499F-91C3-CF41526EACA0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0CA8E974-93BD-4F84-AD0A-8D59853F5C5A}
