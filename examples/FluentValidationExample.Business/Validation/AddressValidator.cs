@@ -7,8 +7,6 @@ namespace FluentValidationExample.Business.Validation
     {
         public AddressValidator()
         {
-            CascadeMode = CascadeMode.StopOnFirstFailure;
-
             RuleFor(dto => dto.Street)
                 .NotEmpty()
                 .MaximumLength(3);

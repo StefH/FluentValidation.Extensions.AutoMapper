@@ -1,11 +1,11 @@
 ﻿using System.Linq;
 using FluentValidation;
-using FluentValidationExample.Common.Validation;
 using JetBrains.Annotations;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Logging;
+using Stef.Validation;
 
 namespace FluentValidationExample.Web.Filters
 {
