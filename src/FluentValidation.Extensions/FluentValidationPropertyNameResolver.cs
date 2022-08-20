@@ -29,7 +29,11 @@ namespace FluentValidation.Extensions.AutoMapper
 
         private void Init(IMapper mapper)
         {
+#if AUTOMAPPER11
+            var allTypeMaps = ?;
+#else
             var allTypeMaps = mapper.ConfigurationProvider.GetAllTypeMaps();
+#endif
             foreach (TypeMap map in allTypeMaps)
             {
 #if AUTOMAPPER11 || AUTOMAPPER8
