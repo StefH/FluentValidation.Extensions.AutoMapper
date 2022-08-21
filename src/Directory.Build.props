@@ -12,7 +12,7 @@
         <PackageReleaseNotes>See ReleaseNotes.md</PackageReleaseNotes>
         <PackageIconUrl>https://fluentvalidation.net/assets/images/logo/fluent-validation-icon.png</PackageIconUrl>
         <PackageProjectUrl>https://github.com/StefH/FluentValidation.Extensions.AutoMapper</PackageProjectUrl>
-        <License>MIT</License>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <RepositoryType>git</RepositoryType>
         <RepositoryUrl>https://github.com/StefH/FluentValidation.Extensions.AutoMapper</RepositoryUrl>
         <RootNamespace>FluentValidation.Extensions.AutoMapper</RootNamespace>
