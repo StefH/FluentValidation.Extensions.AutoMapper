@@ -16,9 +16,9 @@ public class Startup
         Configuration = configuration;
     }
 
-    public void ConfigureAndRun(WebApplication app, IWebHostEnvironment env, IMapper mapper)
+    public void ConfigureAndRun(WebApplication app, IWebHostEnvironment env)
     {
-        ConfigureAutoMapperAndFluentValidation(mapper);
+        ConfigureAutoMapperAndFluentValidation(app);
 
         // Configure the HTTP request pipeline.
         if (app.Environment.IsDevelopment())
@@ -36,8 +36,9 @@ public class Startup
         app.Run();
     }
 
-    private static void ConfigureAutoMapperAndFluentValidation(IMapper mapper)
+    private static void ConfigureAutoMapperAndFluentValidation(WebApplication app)
     {
+        var mapper = app.Services.GetRequiredService<IMapper>();
         mapper.ConfigurationProvider.AssertConfigurationIsValid();
 
         var resolver = new FluentValidationPropertyNameResolver(mapper);

@@ -9,9 +9,8 @@ using Stef.Validation;
 namespace FluentValidation.Extensions.AutoMapper;
 
 /// <summary>
-/// Implementation from IFluentValidationPropertyNameResolver
+/// Implementation from <seealso cref="IFluentValidationPropertyNameResolver" />
 /// </summary>
-/// <seealso cref="IFluentValidationPropertyNameResolver" />
 public class FluentValidationPropertyNameResolver : IFluentValidationPropertyNameResolver
 {
     private readonly IDictionary<(Type dtoType, string dtoProperty), string> _mappings = new Dictionary<(Type dtoType, string dtoProperty), string>();
@@ -30,8 +29,8 @@ public class FluentValidationPropertyNameResolver : IFluentValidationPropertyNam
 #if AUTOMAPPER11
         var configuration = mapper.ConfigurationProvider;
         var configurationType = configuration.GetType();
-        var fieldInfo = configurationType.GetField("_configuredMaps", BindingFlags.Instance | BindingFlags.NonPublic)!;
-        var configuredMaps = (Dictionary<TypePair, TypeMap>)fieldInfo.GetValue(configuration)!;
+        var configuredMapsFieldInfo = configurationType.GetField("_configuredMaps", BindingFlags.Instance | BindingFlags.NonPublic)!;
+        var configuredMaps = (Dictionary<TypePair, TypeMap>)configuredMapsFieldInfo.GetValue(configuration)!;
         var allTypeMaps = configuredMaps.Values;
 #else
         var allTypeMaps = mapper.ConfigurationProvider.GetAllTypeMaps();
@@ -40,7 +39,6 @@ public class FluentValidationPropertyNameResolver : IFluentValidationPropertyNam
         {
 #if AUTOMAPPER7
             var propertyMaps = map.GetPropertyMaps();
-            
 #else
             var propertyMaps = map.PropertyMaps;
 #endif

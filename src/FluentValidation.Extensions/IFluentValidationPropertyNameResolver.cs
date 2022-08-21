@@ -5,7 +5,7 @@ using System.Reflection;
 namespace FluentValidation.Extensions.AutoMapper;
 
 /// <summary>
-/// FluentValidationPropertyNameResolver to map the DTO-PropertyName to (View)Model-PropertyName.
+/// Interface to map the DTO-PropertyName to (View)Model-PropertyName.
 /// </summary>
 public interface IFluentValidationPropertyNameResolver
 {

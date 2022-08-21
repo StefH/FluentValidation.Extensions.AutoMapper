@@ -1,5 +1,4 @@
 using System.Reflection;
-using AutoMapper;
 using FluentValidationExample.WebApi6;
 using FluentValidationExample.WebApi6.Filters;
 
@@ -18,4 +17,4 @@ builder.Services.AddAutoMapper(Assembly.GetAssembly(typeof(Program)));
 var app = builder.Build();
 
 var startup = new Startup(builder.Configuration);
-startup.ConfigureAndRun(app, builder.Environment, builder.Services.BuildServiceProvider().GetRequiredService<IMapper>());
+startup.ConfigureAndRun(app, builder.Environment);
