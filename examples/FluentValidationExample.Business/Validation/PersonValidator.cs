@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using FluentValidationExample.Business.Models.Public;
-using FluentValidationExample.Common.Validation;
 using JetBrains.Annotations;
+using Stef.Validation;
 
 namespace FluentValidationExample.Business.Validation
 {
@@ -10,8 +10,6 @@ namespace FluentValidationExample.Business.Validation
         public PersonValidator([NotNull] IValidator<AddressDto> addressValidator)
         {
             Guard.NotNull(addressValidator, nameof(addressValidator));
-
-            CascadeMode = CascadeMode.StopOnFirstFailure;
 
             RuleFor(dto => dto.First)
                 .NotEmpty()

@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using FluentValidationExample.Business.Interfaces.Public;
 using FluentValidationExample.Business.Models.Public;
-using FluentValidationExample.Common.Validation;
+using Stef.Validation;
 
 namespace FluentValidationExample.Business.Implementations
 {

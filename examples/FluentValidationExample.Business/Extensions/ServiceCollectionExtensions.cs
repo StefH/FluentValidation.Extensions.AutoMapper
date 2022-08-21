@@ -2,8 +2,8 @@
 using FluentValidationExample.Business.Implementations;
 using FluentValidationExample.Business.Interfaces.Public;
 using FluentValidationExample.Business.Validation;
-using FluentValidationExample.Common.Validation;
 using JetBrains.Annotations;
+using Stef.Validation;
 
 // ReSharper disable once CheckNamespace
 namespace Microsoft.Extensions.DependencyInjection
