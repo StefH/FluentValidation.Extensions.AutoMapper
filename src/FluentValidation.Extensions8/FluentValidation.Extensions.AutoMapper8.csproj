@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="../version.xml" />
+
+    <PropertyGroup>
+        <Version>8.0.$(PatchVersion)</Version>
+        <DefineConstants>$(DefineConstants);AUTOMAPPER8</DefineConstants>
+        <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+        <PathMap>$(MSBuildProjectDirectory)=/</PathMap>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="..\FluentValidation.Extensions\FluentValidationPropertyNameResolver.cs" Link="FluentValidationPropertyNameResolver.cs" />
+        <Compile Include="..\FluentValidation.Extensions\IFluentValidationPropertyNameResolver.cs" Link="IFluentValidationPropertyNameResolver.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AutoMapper" Version="8.0.0" />
+        <PackageReference Include="Stef.Validation" Version="0.1.0" />
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+        <PathMap>$(MSBuildProjectDirectory)=/</PathMap>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    </PropertyGroup>
+
+    <ItemGroup Condition=" '$(TargetFramework)' == 'net461'">
+        <PackageReference Include="FluentValidation" Version="9.5.4" />
+    </ItemGroup>
+
+    <ItemGroup Condition=" '$(TargetFramework)' == 'net45'">
+        <PackageReference Include="FluentValidation" Version="8.6.3" />
+    </ItemGroup>
+
+</Project>

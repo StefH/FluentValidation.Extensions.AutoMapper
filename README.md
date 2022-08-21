@@ -1,5 +1,7 @@
 # FluentValidation.Extensions.AutoMapper
-FluentValidation Extensions for AutoMapper 7 and 8
+FluentValidation Extensions for AutoMapper 7, 8 and 11.
+
+
 
 ## NuGet
 [![NuGet Badge FluentValidation.Extensions.AutoMapper](https://buildstats.info/nuget/FluentValidationExtensions.AutoMapper)](https://www.nuget.org/packages/FluentValidationExtensions.AutoMapper)

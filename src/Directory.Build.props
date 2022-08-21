@@ -1,0 +1,30 @@
+<Project>
+    <PropertyGroup>
+        <Description>Extensions for FluentValidation to support the correct property names when using AutoMapper to map models to dto's.</Description>
+        <AssemblyTitle>FluentValidation.Extensions.AutoMapper</AssemblyTitle>
+        <Authors>Stef Heyenrath</Authors>
+        <Copyright>Stef Heyenrath</Copyright>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <AssemblyName>FluentValidation.Extensions.AutoMapper</AssemblyName>
+        <Title>FluentValidation.Extensions.AutoMapper</Title>
+        <PackageId>FluentValidationExtensions.AutoMapper</PackageId>
+        <PackageTags>FluentValidation;AutoMapper;PropertyName;PropertyNames;PropertyNameResolver</PackageTags>
+        <PackageReleaseNotes>See ReleaseNotes.md</PackageReleaseNotes>
+        <PackageIconUrl>https://fluentvalidation.net/assets/images/logo/fluent-validation-icon.png</PackageIconUrl>
+        <PackageProjectUrl>https://github.com/StefH/FluentValidation.Extensions.AutoMapper</PackageProjectUrl>
+        <License>MIT</License>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/StefH/FluentValidation.Extensions.AutoMapper</RepositoryUrl>
+        <RootNamespace>FluentValidation.Extensions.AutoMapper</RootNamespace>
+        <DebugType>full</DebugType>
+        <IncludeSource>True</IncludeSource>
+        <IncludeSymbols>True</IncludeSymbols>
+        <ProjectGuid>{49E18B98-F0DC-401A-8419-BB39A785F651}</ProjectGuid>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+        <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+        <LangVersion>latest</LangVersion>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+</Project>

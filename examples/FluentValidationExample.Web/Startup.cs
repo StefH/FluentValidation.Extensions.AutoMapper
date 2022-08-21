@@ -56,7 +56,7 @@ namespace FluentValidationExample.Web
             mapper.ConfigurationProvider.AssertConfigurationIsValid();
 
             var resolver = new FluentValidationPropertyNameResolver(mapper);
-            ValidatorOptions.PropertyNameResolver = resolver.Resolve;
+            ValidatorOptions.Global.PropertyNameResolver = resolver.Resolve;
         }
     }
 }

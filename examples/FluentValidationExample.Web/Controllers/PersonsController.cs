@@ -1,11 +1,11 @@
-﻿using AutoMapper;
+﻿using System.Collections.Generic;
+using AutoMapper;
 using FluentValidationExample.Business.Interfaces.Public;
 using FluentValidationExample.Business.Models.Public;
-using FluentValidationExample.Common.Validation;
 using FluentValidationExample.Web.Models;
 using JetBrains.Annotations;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
+using Stef.Validation;
 
 namespace FluentValidationExample.Web.Controllers
 {

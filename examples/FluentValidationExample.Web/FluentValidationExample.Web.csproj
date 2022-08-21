@@ -1,31 +1,23 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Validation\FluentValidationPropertyNameResolver.cs" />
-    <Compile Remove="Validation\IFluentValidationPropertyNameResolver.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Extensions\" />
-    <Folder Include="Validation\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="8.0.0" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.0.0" />
-    <PackageReference Include="FluentValidation.AspNetCore" Version="8.1.2" />
-    <PackageReference Include="JetBrains.Annotations" Version="2018.2.1" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="9.5.4" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\FluentValidation.Extensions\FluentValidation.Extensions.AutoMapper.csproj" />
+    <ProjectReference Include="..\..\src\FluentValidation.Extensions8\FluentValidation.Extensions.AutoMapper8.csproj" />
     <ProjectReference Include="..\FluentValidationExample.Business\FluentValidationExample.Business.csproj" />
     <ProjectReference Include="..\FluentValidationExample.Common\FluentValidationExample.Common.csproj" />
   </ItemGroup>
