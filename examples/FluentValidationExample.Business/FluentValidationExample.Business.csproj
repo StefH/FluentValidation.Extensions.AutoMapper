@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="8.1.2" />
-    <PackageReference Include="JetBrains.Annotations" Version="2018.2.1" />
+    <PackageReference Include="JetBrains.Annotations" Version="2023.3.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.1.1" />
     <PackageReference Include="Scrutor" Version="3.0.2" />
   </ItemGroup>
