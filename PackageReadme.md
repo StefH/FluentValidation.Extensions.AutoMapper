@@ -1,16 +1,12 @@
-# ![icon](./resources/fluent-validation-icon_32x32.png) FluentValidation.Extensions.AutoMapper
+﻿## FluentValidation.Extensions.AutoMapper
 FluentValidation Extensions for AutoMapper 7, 8 and 11 (and up).
 
-
-## NuGet
-[![NuGet Badge FluentValidation.Extensions.AutoMapper](https://img.shields.io/nuget/v/FluentValidationExtensions.AutoMapper)](https://www.nuget.org/packages/FluentValidationExtensions.AutoMapper)
-
-# Problem
+## Problem
 
 When the normal MVC validation is defined on a ViewModel and additional validation is done in the business-layer on the dto's using FluentValidation, the error messages are using the property names from the dto instead of the view-model.
 The following code shows this problem:
 
-### ViewModel Example
+#### ViewModel Example
 The flattened **Person** view model class.
 
 ``` c#
@@ -26,7 +22,7 @@ public class Person
 ```
 
 
-# DTO models example
+## DTO models example
 
 The **PersonDto** model class:
 ``` c#
@@ -63,7 +59,7 @@ When posting an invalid Person object to the WebAPI, you get an error back like 
 }
 ```
 
-# Solution
+## Solution
 This library solves this issue by implementing a custom **FluentValidation - PropertyNameResolver** which uses the AutoMapper mapping definitions to translate the errors with DTO property names into view model errors.
 Example response will be like:
 ``` json
@@ -80,7 +76,7 @@ Example response will be like:
 }
 ```
 
-## Code Changes
+### Code Changes
 To get this working you need the following changes for a DotNet Core MVC WebAPI project:
 
 
@@ -107,7 +103,7 @@ You can then use the injected `IMapper` to create a new instance from the `Fluen
 
 For a complete example, see the code from [FluentValidationExample.Web](https://github.com/StefH/FluentValidation.Extensions.AutoMapper/tree/master/examples/FluentValidationExample.Web).
 
-## Sponsors
+### Sponsors
 
 [Entity Framework Extensions](https://entityframework-extensions.net/?utm_source=StefH) and [Dapper Plus](https://dapper-plus.net/?utm_source=StefH) are major sponsors and proud to contribute to the development of **FluentValidation.Extensions.AutoMapper**.
 
