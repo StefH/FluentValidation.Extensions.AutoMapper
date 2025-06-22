@@ -12,6 +12,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C744D7B9-2E25-4B38-85F2-AE17631CB1EE}"
 	ProjectSection(SolutionItems) = preProject
 		Generate ReleaseNotes.bat = Generate ReleaseNotes.bat
+		PackageReadme.md = PackageReadme.md
 		README.md = README.md
 		ReleaseNotes.md = ReleaseNotes.md
 	EndProjectSection
